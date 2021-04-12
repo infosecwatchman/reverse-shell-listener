@@ -15,7 +15,7 @@ Next, login as the new user you have just created to finish the installation.
 ```
 sudo apt-get install nodejs
 sudo ln -s "$(which nodejs)" /usr/bin/node
-git clone https://github.com/nemanjan00/reverse-shell-listener.git
+git clone https://github.com/infosecwatchman/reverse-shell-listener.git
 cd reverse-shell-listener/
 sudo apt-get install npm
 npm install
