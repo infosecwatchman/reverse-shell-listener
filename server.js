@@ -150,5 +150,5 @@ var server = net.createServer(function(socket) {
 	id++;
 });
 
-server.listen(1337, '0.0.0.0');
+server.listen(443, '0.0.0.0');
 

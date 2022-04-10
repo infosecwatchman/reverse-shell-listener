@@ -1,0 +1,16 @@
+version: '3'
+services:
+  reverseShellListener:
+    build: RS_Dockerfile
+    ports:
+      - "443:443"
+    hostname: reverseShellListener
+  proxy:
+    build: Proxy_Dockerfile
+    ports:
+      - "8080:8080"
+    links:
+      - reverseShellListener
+    depends_on:
+      - reverseShellListener
+

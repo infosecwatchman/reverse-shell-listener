@@ -1,5 +1,5 @@
 const settings = {
-	"PORT": 8080
+	"PORT": 8000
 };
 
 module.exports = function(app){
