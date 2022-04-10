@@ -1,12 +1,20 @@
 version: '3'
 services:
-  reverseShellListener:
-    build: RS_Dockerfile
+  reverseshelllistener:
+    build:
+      context: .
+      args:
+        - NODE_ENV=local
+      dockerfile: RS_Dockerfile
     ports:
       - "443:443"
     hostname: reverseShellListener
   proxy:
-    build: Proxy_Dockerfile
+    build:
+      context: .
+      args:
+        - NODE_ENV=local
+      dockerfile: Proxy_Dockerfile
     ports:
       - "8080:8080"
     links:
