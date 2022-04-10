@@ -7,8 +7,8 @@ import (
 	"net/url"
 )
 
-const RSusername = ""
-const RSpassword = ""
+const RSusername = "user"
+const RSpassword = "password"
 
 func basicAuth(next http.HandlerFunc) http.HandlerFunc {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
@@ -42,7 +42,7 @@ func NewProxy(targetHost string) (*httputil.ReverseProxy, error) {
 
 func main() {
 	// initialize a reverse proxy and pass the actual backend server url here
-	proxy, err := NewProxy("reverseShellListener:8000")
+	proxy, err := NewProxy("http://reverseShellListener:8000")
 	if err != nil {
 		panic(err)
 	}
